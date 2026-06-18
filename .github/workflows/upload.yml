@@ -66,8 +66,9 @@ jobs:
           SPEC_VERSION=$(grep '^Version:' "$SPEC_FILE" | awk '{print $2}' | head -1)
           SPEC_NAME=$(grep '^Name:' "$SPEC_FILE" | awk '{print $2}' | head -1)
           TARBALL_NAME="${SPEC_NAME}-${SPEC_VERSION}"
+          WORKDIR=$(basename "$(pwd)")
           cd ..
-          mv source-tree "$TARBALL_NAME"
+          mv "$WORKDIR" "$TARBALL_NAME"
           tar czf "${TARBALL_NAME}.tar.gz" "$TARBALL_NAME"
 
       - name: Setup rpmbuild Tree
