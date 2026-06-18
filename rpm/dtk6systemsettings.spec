@@ -3,8 +3,8 @@ Version:        6.0.0
 Release:        1%{?dist}
 Summary:        DTK6 System Settings Library
 License:        LGPL-3.0-or-later
-URL:            https://github.com/linuxdeepin/dtksystemsettings
-Source0:        %{name}-%{version}.tar.gz
+URL:            https://github.com/LingmoOS/dtk6systemsettings
+Source0:        https://github.com/LingmoOS/dtk6systemsettings/archive/refs/tags/v%{version}/%{name}-%{version}.tar.gz
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.13
