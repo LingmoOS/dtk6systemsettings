@@ -13,9 +13,9 @@ TimeDate1Interface::TimeDate1Interface(QObject *parent)
     : QObject(parent)
 {
 #ifdef USE_FAKE_INTERFACE
-    static const QString &Service = QStringLiteral("com.deepin.daemon.FakeTimeDate1");
-    static const QString &Path = QStringLiteral("/com/deepin/daemon/FakeTimeDate1");
-    static const QString &Interface = QStringLiteral("com.deepin.daemon.FakeTimeDate1");
+    static const QString &Service = QStringLiteral("com.lingmo.daemon.FakeTimeDate1");
+    static const QString &Path = QStringLiteral("/com/lingmo/daemon/FakeTimeDate1");
+    static const QString &Interface = QStringLiteral("com.lingmo.daemon.FakeTimeDate1");
     QDBusConnection connection = QDBusConnection::sessionBus();
 #else
     static const QString &Service = QStringLiteral("org.freedesktop.timedate1");

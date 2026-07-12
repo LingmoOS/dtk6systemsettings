@@ -12,7 +12,7 @@ DLOGIN_BEGIN_NAMESPACE
 class SessionManagerService : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.SessionManager")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.SessionManager")
 public:
     SessionManagerService(QObject *parent = nullptr);
     ~SessionManagerService() override;

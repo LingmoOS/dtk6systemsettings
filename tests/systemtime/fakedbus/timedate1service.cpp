@@ -18,8 +18,8 @@ TimeDate1Service::~TimeDate1Service()
 
 void TimeDate1Service::registerService()
 {
-    const QString &service = QLatin1String("com.deepin.daemon.FakeTimeDate1");
-    const QString &path = QLatin1String("/com/deepin/daemon/FakeTimeDate1");
+    const QString &service = QLatin1String("com.lingmo.daemon.FakeTimeDate1");
+    const QString &path = QLatin1String("/com/lingmo/daemon/FakeTimeDate1");
     QDBusConnection bus = QDBusConnection::sessionBus();
     if (!bus.registerService(service)) {
         QString errorMsg = bus.lastError().message();
@@ -36,8 +36,8 @@ void TimeDate1Service::registerService()
 void TimeDate1Service::unRegisterService()
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.unregisterObject(QLatin1String("/com/deepin/daemon/FakeTimeDate1"));
-    bus.unregisterService(QLatin1String("com.deepin.daemon.FakeTimeDate1"));
+    bus.unregisterObject(QLatin1String("/com/lingmo/daemon/FakeTimeDate1"));
+    bus.unregisterService(QLatin1String("com.lingmo.daemon.FakeTimeDate1"));
 }
 
 bool TimeDate1Service::canNTP() const

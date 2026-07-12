@@ -12,14 +12,14 @@ DSystemAccountsInterface::DSystemAccountsInterface(QObject *parent)
     : QObject(parent)
 {
 #if defined(USE_FAKE_INTERFACE)
-    const QString &Service = QStringLiteral("com.deepin.daemon.FakeAccounts");
-    const QString &Path = QStringLiteral("/com/deepin/daemon/FakeAccounts");
-    const QString &Interface = QStringLiteral("com.deepin.daemon.FakeAccounts");
+    const QString &Service = QStringLiteral("com.lingmo.daemon.FakeAccounts");
+    const QString &Path = QStringLiteral("/com/lingmo/daemon/FakeAccounts");
+    const QString &Interface = QStringLiteral("com.lingmo.daemon.FakeAccounts");
     QDBusConnection Connection = QDBusConnection::sessionBus();
 #else
-    const QString &Service = QStringLiteral("org.deepin.dde.Accounts1");
-    const QString &Path = QStringLiteral("/org/deepin/dde/Accounts1");
-    const QString &Interface = QStringLiteral("org.deepin.dde.Accounts1");
+    const QString &Service = QStringLiteral("org.lingmo.Accounts1");
+    const QString &Path = QStringLiteral("/org/lingmo/Accounts1");
+    const QString &Interface = QStringLiteral("org.lingmo.Accounts1");
     QDBusConnection Connection = QDBusConnection::systemBus();
     Connection
             .connect(Service, Path, Interface, "UserAdded", this, SLOT(receiveUserAdded(QString)));

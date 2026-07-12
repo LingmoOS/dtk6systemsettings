@@ -36,22 +36,22 @@ bool StartManagerService::RemoveAutostart(const QString &fileName)
 bool StartManagerService::registerService()
 {
     QDBusConnection connection = QDBusConnection::sessionBus();
-    if (!connection.registerService("com.deepin.FakeSessionManager")) {
+    if (!connection.registerService("com.lingmo.FakeSessionManager")) {
         QString errorMsg = connection.lastError().message();
         if (errorMsg.isEmpty())
             errorMsg = "maybe it's running";
 
         qWarning() << QString("Can't register the %1 service, %2.")
-                              .arg("com.deepin.FakeSessionManager")
+                              .arg("com.lingmo.FakeSessionManager")
                               .arg(errorMsg);
         return false;
     }
-    if (!connection.registerObject("/com/deepin/FakeStartManager",
+    if (!connection.registerObject("/com/lingmo/FakeStartManager",
                                    this,
                                    QDBusConnection::ExportScriptableContents)) {
         QString errorMsg = connection.lastError().message();
         qWarning() << QString("Can't register %1 the D-Bus object, %2.")
-                              .arg("com.deepin.FakeSessionManager")
+                              .arg("com.lingmo.FakeSessionManager")
                               .arg(errorMsg);
         return false;
     }
@@ -61,8 +61,8 @@ bool StartManagerService::registerService()
 void StartManagerService::unRegisterService()
 {
     QDBusConnection connection = QDBusConnection::sessionBus();
-    connection.unregisterObject("/com/deepin/FakeStartManager");
-    connection.unregisterService("com.deepin.FakeSessionManager");
+    connection.unregisterObject("/com/lingmo/FakeStartManager");
+    connection.unregisterService("com.lingmo.FakeSessionManager");
 }
 
 DLOGIN_END_NAMESPACE

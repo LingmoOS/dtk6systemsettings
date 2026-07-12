@@ -21,7 +21,7 @@ public:
     Q_PROPERTY(bool Locked READ Locked NOTIFY LockedChanged);
     bool Locked();
 
-    static inline const char *staticInterfaceName() { return "com.deepin.SessionManager"; }
+    static inline const char *staticInterfaceName() { return "com.lingmo.SessionManager"; }
 
     SessionManagerInterface(const QString &service,
                             const QString &path,

@@ -21,8 +21,8 @@ TimeSync1Service::~TimeSync1Service()
 
 void TimeSync1Service::registerService()
 {
-    const QString &service = QLatin1String("com.deepin.daemon.FakeTimeSync1");
-    const QString &path = QLatin1String("/com/deepin/daemon/FakeTimeSync1");
+    const QString &service = QLatin1String("com.lingmo.daemon.FakeTimeSync1");
+    const QString &path = QLatin1String("/com/lingmo/daemon/FakeTimeSync1");
     QDBusConnection bus = QDBusConnection::sessionBus();
     // register
     if (!bus.registerService(service)) {
@@ -40,8 +40,8 @@ void TimeSync1Service::registerService()
 void TimeSync1Service::unRegisterService()
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.unregisterObject(QLatin1String("/com/deepin/daemon/FakeTimeSync1"));
-    bus.unregisterService(QLatin1String("com.deepin.daemon.FakeTimeSync1"));
+    bus.unregisterObject(QLatin1String("/com/lingmo/daemon/FakeTimeSync1"));
+    bus.unregisterService(QLatin1String("com.lingmo.daemon.FakeTimeSync1"));
 }
 
 QStringList TimeSync1Service::fallbackNTPServers() const

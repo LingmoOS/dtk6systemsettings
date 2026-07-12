@@ -8,9 +8,9 @@ DPOWER_BEGIN_NAMESPACE
 SystemPowerInterface::SystemPowerInterface(QObject *parent)
     : QObject(parent)
 {
-    const QString &Service = QStringLiteral("com.deepin.system.Power");
-    const QString &Path = QStringLiteral("/com/deepin/system/Power");
-    const QString &Interface = QStringLiteral("com.deepin.system.Power");
+    const QString &Service = QStringLiteral("com.lingmo.system.Power");
+    const QString &Path = QStringLiteral("/com/lingmo/system/Power");
+    const QString &Interface = QStringLiteral("com.lingmo.system.Power");
 
     m_inter.reset(new DDBusInterface(Service, Path, Interface, QDBusConnection::systemBus(), this));
 }

@@ -22,8 +22,8 @@ FakeAccountsUserService::~FakeAccountsUserService()
 void FakeAccountsUserService::registerService()
 {
     registerType();
-    const QString &Service = QLatin1String("com.deepin.daemon.FakeAccounts");
-    const QString &Path = QLatin1String("/com/deepin/daemon/FakeAccounts/User1000");
+    const QString &Service = QLatin1String("com.lingmo.daemon.FakeAccounts");
+    const QString &Path = QLatin1String("/com/lingmo/daemon/FakeAccounts/User1000");
     QDBusConnection bus = QDBusConnection::sessionBus();
     if (!bus.registerService(Service)) {
         QString errorMsg = bus.lastError().message();
@@ -39,6 +39,6 @@ void FakeAccountsUserService::registerService()
 void FakeAccountsUserService::unregisterService()
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.unregisterObject("/com/deepin/daemon/FakeAccounts/User1000");
-    bus.unregisterService("com.deepin.daemon.FakeAccounts");
+    bus.unregisterObject("/com/lingmo/daemon/FakeAccounts/User1000");
+    bus.unregisterService("com.lingmo.daemon.FakeAccounts");
 }

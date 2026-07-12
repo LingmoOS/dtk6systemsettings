@@ -5,14 +5,14 @@
 #include "daemonpowerinterface.h"
 
 #ifdef USE_FAKE_INTERFACE
-static const QString &Service = QStringLiteral("com.deepin.daemon.FakePower");
-static const QString &Path = QStringLiteral("/com/deepin/daemon/FakePower");
-static const QString &Interface = QStringLiteral("com.deepin.daemon.FakePower");
+static const QString &Service = QStringLiteral("com.lingmo.daemon.FakePower");
+static const QString &Path = QStringLiteral("/com/lingmo/daemon/FakePower");
+static const QString &Interface = QStringLiteral("com.lingmo.daemon.FakePower");
 #  define DBUS_CON QDBusConnection::sessionBus()
 #else
-static const QString &Service = QStringLiteral("com.deepin.daemon.Power");
-static const QString &Path = QStringLiteral("/com/deepin/daemon/Power");
-static const QString &Interface = QStringLiteral("com.deepin.daemon.Power");
+static const QString &Service = QStringLiteral("com.lingmo.daemon.Power");
+static const QString &Path = QStringLiteral("/com/lingmo/daemon/Power");
+static const QString &Interface = QStringLiteral("com.lingmo.daemon.Power");
 #  define DBUS_CON QDBusConnection::sessionBus()
 #endif
 

@@ -12,7 +12,7 @@ DLOGIN_BEGIN_NAMESPACE
 class StartManagerService : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.StartManager")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.StartManager")
 public:
     StartManagerService(QObject *parent = nullptr);
     ~StartManagerService() override;

@@ -18,10 +18,10 @@ using anwserIndex = QList<qint32>;
 class FakeAccountsUserService : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.daemon.FakeAccounts.User")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.daemon.FakeAccounts.User")
     Q_CLASSINFO("D-Bus Introspection",
                 ""
-                "  <interface name=\"com.deepin.daemon.FakeAccounts.User\">\n"
+                "  <interface name=\"com.lingmo.daemon.FakeAccounts.User\">\n"
                 "    <method name=\"AddGroup\">\n"
                 "      <arg direction=\"in\" type=\"s\" name=\"group\"/>\n"
                 "    </method>\n"

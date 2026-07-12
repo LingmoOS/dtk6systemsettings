@@ -14,9 +14,9 @@ UPowerKbdBacklightInterface::UPowerKbdBacklightInterface(QObject *parent)
     : QObject(parent)
 {
 #ifdef USE_FAKE_INTERFACE
-    static const QString &Service = QStringLiteral("com.deepin.daemon.FakePower");
-    static const QString &Path = QStringLiteral("/com/deepin/daemon/FakePower");
-    static const QString &Interface = QStringLiteral("com.deepin.daemon.FakePower");
+    static const QString &Service = QStringLiteral("com.lingmo.daemon.FakePower");
+    static const QString &Path = QStringLiteral("/com/lingmo/daemon/FakePower");
+    static const QString &Interface = QStringLiteral("com.lingmo.daemon.FakePower");
     QDBusConnection connection = QDBusConnection::sessionBus();
 #else
     static const QString &Service = QStringLiteral("org.freedesktop.UPower");

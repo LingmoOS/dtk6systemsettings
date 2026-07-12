@@ -19,7 +19,7 @@ using DCORE_NAMESPACE::DDBusInterface;
 class TimeSync1Service : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.daemon.FakeTimeSync1")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.daemon.FakeTimeSync1")
 public:
     explicit TimeSync1Service(QObject *parent = nullptr);
     virtual ~TimeSync1Service();

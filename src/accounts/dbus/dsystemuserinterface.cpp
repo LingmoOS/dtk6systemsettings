@@ -10,12 +10,12 @@ DSystemUserInterface::DSystemUserInterface(const QString &path, QObject *parent)
     : QObject(parent)
 {
 #if defined(USE_FAKE_INTERFACE)
-    const QString &Service = QStringLiteral("com.deepin.daemon.FakeAccounts");
-    const QString &Interface = QStringLiteral("com.deepin.daemon.FakeAccounts.User");
+    const QString &Service = QStringLiteral("com.lingmo.daemon.FakeAccounts");
+    const QString &Interface = QStringLiteral("com.lingmo.daemon.FakeAccounts.User");
     QDBusConnection Connection = QDBusConnection::sessionBus();
 #else
-    const QString &Service = QStringLiteral("org.deepin.dde.Accounts1");
-    const QString &Interface = QStringLiteral("org.deepin.dde.Accounts1.User");
+    const QString &Service = QStringLiteral("org.lingmo.Accounts1");
+    const QString &Interface = QStringLiteral("org.lingmo.Accounts1.User");
     QDBusConnection Connection = QDBusConnection::systemBus();
 #endif
     ReminderInfo_p::registerMetaType();

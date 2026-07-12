@@ -39,8 +39,8 @@ DaemonPowerService::~DaemonPowerService()
 
 void DaemonPowerService::registerService()
 {
-    const QString &service = QLatin1String("com.deepin.daemon.FakePower");
-    const QString &path = QLatin1String("/com/deepin/daemon/FakePower");
+    const QString &service = QLatin1String("com.lingmo.daemon.FakePower");
+    const QString &path = QLatin1String("/com/lingmo/daemon/FakePower");
     QDBusConnection bus = QDBusConnection::sessionBus();
     if (!bus.registerService(service)) {
         QString errorMsg = bus.lastError().message();
@@ -57,6 +57,6 @@ void DaemonPowerService::registerService()
 void DaemonPowerService::unRegisterService()
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.unregisterObject(QLatin1String("/com/deepin/daemon/FakePower"));
-    bus.unregisterService(QLatin1String("com.deepin.daemon.FakePower"));
+    bus.unregisterObject(QLatin1String("/com/lingmo/daemon/FakePower"));
+    bus.unregisterService(QLatin1String("com.lingmo.daemon.FakePower"));
 }

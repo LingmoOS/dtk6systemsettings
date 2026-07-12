@@ -20,7 +20,7 @@ class StartManagerInterface : public QObject
     Q_OBJECT
 
 public:
-    static inline const char *staticInterfaceName() { return "com.deepin.StartManager"; }
+    static inline const char *staticInterfaceName() { return "com.lingmo.StartManager"; }
 
     StartManagerInterface(const QString &service,
                           const QString &path,

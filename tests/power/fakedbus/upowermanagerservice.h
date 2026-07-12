@@ -10,7 +10,7 @@
 class UPowerManagerService : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.daemon.FakePower")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.daemon.FakePower")
 public:
     explicit UPowerManagerService(QObject *parent = nullptr);
     virtual ~UPowerManagerService();

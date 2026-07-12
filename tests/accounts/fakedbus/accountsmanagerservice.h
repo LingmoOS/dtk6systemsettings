@@ -10,10 +10,10 @@
 class FakeAccountsManagerService : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.daemon.FakeAccounts")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.daemon.FakeAccounts")
     Q_CLASSINFO("D-Bus Introspection",
                 ""
-                "  <interface name=\"com.deepin.daemon.FakeAccounts\">\n"
+                "  <interface name=\"com.lingmo.daemon.FakeAccounts\">\n"
                 "    <method name=\"ListCachedUsers\">\n"
                 "      <arg direction=\"out\" type=\"ao\" name=\"users\"/>\n"
                 "    </method>\n"
@@ -81,7 +81,7 @@ public Q_SLOTS:
         Q_UNUSED(fullName)
         Q_UNUSED(type)
         m_createUserTrigger = true;
-        return QDBusObjectPath{ "/com/deepin/daemon/FakeAccounts/User1000" };
+        return QDBusObjectPath{ "/com/lingmo/daemon/FakeAccounts/User1000" };
     }
 
     Q_SCRIPTABLE void DeleteUser(QString name, bool rmFiles)
@@ -95,14 +95,14 @@ public Q_SLOTS:
     {
         Q_UNUSED(uid)
         m_findUserByIdTrigger = true;
-        return QDBusObjectPath{ "/com/deepin/daemon/FakeAccounts/User1000" };
+        return QDBusObjectPath{ "/com/lingmo/daemon/FakeAccounts/User1000" };
     }
 
     Q_SCRIPTABLE QDBusObjectPath FindUserByName(QString name)
     {
         Q_UNUSED(name)
         m_findUserByNameTrigger = true;
-        return QDBusObjectPath{ "/com/deepin/daemon/FakeAccounts/User1000" };
+        return QDBusObjectPath{ "/com/lingmo/daemon/FakeAccounts/User1000" };
     }
 
     Q_SCRIPTABLE QStringList GetPresetGroups(qint32 type)

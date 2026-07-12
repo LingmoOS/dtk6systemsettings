@@ -16,7 +16,7 @@ using DTK_CORE_NAMESPACE::DDBusInterface;
 class TimeDate1Service : public QObject
 {
     Q_OBJECT
-    Q_CLASSINFO("D-Bus Interface", "com.deepin.daemon.FakeTimeDate1")
+    Q_CLASSINFO("D-Bus Interface", "com.lingmo.daemon.FakeTimeDate1")
 public:
     explicit TimeDate1Service(QObject *parent = nullptr);
     virtual ~TimeDate1Service();

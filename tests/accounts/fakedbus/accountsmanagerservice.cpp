@@ -21,8 +21,8 @@ FakeAccountsManagerService::~FakeAccountsManagerService()
 
 void FakeAccountsManagerService::registerService()
 {
-    const QString &Service = QLatin1String("com.deepin.daemon.FakeAccounts");
-    const QString &Path = QLatin1String("/com/deepin/daemon/FakeAccounts");
+    const QString &Service = QLatin1String("com.lingmo.daemon.FakeAccounts");
+    const QString &Path = QLatin1String("/com/lingmo/daemon/FakeAccounts");
     QDBusConnection bus = QDBusConnection::sessionBus();
     if (!bus.registerService(Service)) {
         QString errorMsg = bus.lastError().message();
@@ -38,6 +38,6 @@ void FakeAccountsManagerService::registerService()
 void FakeAccountsManagerService::unregisterService()
 {
     QDBusConnection bus = QDBusConnection::sessionBus();
-    bus.unregisterObject("/com/deepin/daemon/FakeAccounts");
-    bus.unregisterService("com.deepin.daemon.FakeAccounts");
+    bus.unregisterObject("/com/lingmo/daemon/FakeAccounts");
+    bus.unregisterService("com.lingmo.daemon.FakeAccounts");
 }
